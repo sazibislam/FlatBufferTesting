@@ -1,0 +1,32 @@
+apply plugin: 'com.android.model.library'
+
+/*
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+    }
+}
+*/
+
+model {
+    android {
+        compileSdkVersion = 23
+        buildToolsVersion = "23.0.3"
+
+        defaultConfig.with {
+            minSdkVersion.apiLevel = 15
+            targetSdkVersion.apiLevel = 23
+        }
+    }
+
+    android.ndk {
+        moduleName = "FlatBuffersParser"
+        cppFlags.addAll(['-std=c++11', '-fexceptions', '-Wall', '-Wno-literal-suffix'])
+        cppFlags.add("-I${file("src/main/jni/flatbufferslib")}".toString())
+        ldLibs.addAll(["android", "log"])
+        stl = "gnustl_shared"
+    }
+}

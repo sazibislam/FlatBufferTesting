@@ -1,3 +1,6 @@
+#Flatbufferparser module was Created by Miroslaw Stanek on 26.10.2015.
+#I am here implementing that c++ module to parse json and .fbc file to bin file.
+
 # Steps to use Flatbuffers
 
 FlatBuffers is a project from Google that allows you to encode and decode data at great speed. Here’s a quick tutorial on how to install the compiler flatc, a dependency for developers using FlatBuffers.
