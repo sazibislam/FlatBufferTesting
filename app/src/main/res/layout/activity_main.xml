@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      >
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="FlatBuffer Stats"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="4dp"
+        android:onClick="loadFromFlatBuffer"
+        android:text="Load From FlatBuffer"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="4dp"
+        android:onClick="loadFromJson"
+        android:text="Load From Json"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_Flat_buffer_time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_json_time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        tools:text="price"
+        />
+
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

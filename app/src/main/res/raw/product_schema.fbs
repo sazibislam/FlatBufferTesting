@@ -1,0 +1,16 @@
+namespace Product;
+
+table ProductList {
+    product : [Product];
+}
+
+table Product {
+    amount : string;
+    id : long;
+    image : string;
+    link : string;
+    name : string;
+    source : string;
+}
+
+root_type ProductList;
